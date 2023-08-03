@@ -1,4 +1,3 @@
-(ns car-challenge)
 ;; A car dealership has three different car models with the following prices:
 ;; BMW 60.000
 ;; FERRARI 100.000
@@ -21,6 +20,8 @@
 ;; Output: "The Coupon is invalid"
 ;;          FIAT 20.000
 
+(ns challenge-cars)
+
 
 (def cars {"bmw" 60000, "ferrari" 100000, "fiat" 20000})
 
@@ -28,7 +29,7 @@
   "Applies a discount % over the provided value"
   [discount value]
   (int (Math/ceil (- value (* (float (/ discount 100)) value))))
-)
+  )
 
 (defn ValidateCoupon
   "Checks if the coupon code is valid"
@@ -41,7 +42,7 @@
       (println "The coupon is invalid")
       0)
     )
-)
+  )
 
 (defn GetCarListInBudget
   "Returns a list of cars that are within the provided budget, after applying the discount coupon."
